@@ -19,12 +19,14 @@ public class CursedDiceItem extends DiceItem {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if (!level.isClientSide()) {
             Random random = new Random();
-            int roll = random.nextDouble() < 0.7 ?
+            double cursedChance = GoldenLuckyCatItem.hasLuckyCat(player) ? 0.5 : 0.7;
+            int roll = random.nextDouble() < cursedChance ?
                     random.nextInt(3) + 1 :
                     random.nextInt(3) + 4;
 
             player.getPersistentData().putInt(LAST_ROLL_TAG, roll);
-            player.displayClientMessage(Component.literal("☠ " + roll + " ☠"), true);
+            String prefix = GoldenLuckyCatItem.hasLuckyCat(player) ? "🐱" : "☠";
+            player.displayClientMessage(Component.literal(prefix + " " + roll + " " + prefix), true);
         }
 
         return InteractionResultHolder.success(player.getItemInHand(hand));

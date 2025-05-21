@@ -13,6 +13,9 @@
   "item.dicecraft.cursed_dice": "Cursed Dice",
   "item.dicecraft.lucky_dice": "Lucky Dice",
   "item.dicecraft.dice_inspector": "Dice Inspector",
+  "item.dicecraft.coin": "Coin",
+  "item.dicecraft.trick_coin": "Coin",
+  "item.dicecraft.golden_lucky_cat": "Golden Lucky Cat",
   "item.dicecraft.dice": "Dice",
 
   "entity.minecraft.villager.dicecraft.casino": "Casino Dealer"

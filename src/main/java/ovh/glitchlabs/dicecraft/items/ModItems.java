@@ -11,6 +11,8 @@ import ovh.glitchlabs.dicecraft.items.custom.DiceItem;
 import ovh.glitchlabs.dicecraft.items.custom.LootBagItem;
 import ovh.glitchlabs.dicecraft.items.custom.LuckyDiceItem;
 import ovh.glitchlabs.dicecraft.items.custom.CoinItem;
+import ovh.glitchlabs.dicecraft.items.custom.GoldenLuckyCatItem;
+import ovh.glitchlabs.dicecraft.items.custom.TrickCoinItem;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Dicecraft.MODID);
@@ -54,6 +56,12 @@ public class ModItems {
 
     public static final DeferredItem<Item> LOOT_BAG = ITEMS.register("loot_bag",
             () -> new LootBagItem(new Item.Properties()));
+
+    public static final DeferredItem<Item> GOLDEN_LUCKY_CAT = ITEMS.register("golden_lucky_cat",
+            () -> new GoldenLuckyCatItem(new Item.Properties().stacksTo(1)));
+
+    public static final DeferredItem<Item> TRICK_COIN = ITEMS.register("trick_coin",
+            () -> new TrickCoinItem(new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

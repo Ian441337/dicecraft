@@ -26,7 +26,12 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.POKER_CHIP_YELLOW);
                         output.accept(ModItems.POKER_CHIP_RED);
                         output.accept(ModItems.DICE);
+                        output.accept(ModItems.CURSED_DICE);
+                        output.accept(ModItems.LUCKY_DICE);
                         output.accept(ModItems.DICE_INSPECTOR);
+                        output.accept(ModItems.COIN);
+                        output.accept(ModItems.TRICK_COIN);
+                        output.accept(ModItems.GOLDEN_LUCKY_CAT);
                     }).build());
 
 

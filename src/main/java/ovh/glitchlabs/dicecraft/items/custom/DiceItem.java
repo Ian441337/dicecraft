@@ -18,18 +18,26 @@ public class DiceItem extends Item {
         super(properties);
     }
 
-
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if (!level.isClientSide()) {
             Random random = new Random();
-            int diceRoll = random.nextInt(6) + 1;
-
+            int diceRoll;
+            
+            if (GoldenLuckyCatItem.hasLuckyCat(player)) {
+                diceRoll = random.nextDouble() < 0.7 ?
+                    random.nextInt(3) + 4 :
+                    random.nextInt(3) + 1;
+            } else {
+                diceRoll = random.nextInt(6) + 1;
+            }
 
             CompoundTag playerData = player.getPersistentData();
             playerData.putInt(LAST_ROLL_TAG, diceRoll);
 
-            player.displayClientMessage(Component.literal("- " + diceRoll + " -"), true);
+            String prefix = GoldenLuckyCatItem.hasLuckyCat(player) ? "🐱 " : "";
+            String suffix = GoldenLuckyCatItem.hasLuckyCat(player) ? " 🐱" : "";
+            player.displayClientMessage(Component.literal(prefix + "- " + diceRoll + " -" + suffix), true);
         }
 
         return InteractionResultHolder.success(player.getItemInHand(hand));

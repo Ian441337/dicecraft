@@ -18,12 +18,14 @@ public class LuckyDiceItem extends DiceItem {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if (!level.isClientSide()) {
             Random random = new Random();
-            int roll = random.nextDouble() < 0.7 ?
+            double luckChance = GoldenLuckyCatItem.hasLuckyCat(player) ? 0.85 : 0.7;
+            int roll = random.nextDouble() < luckChance ?
                     random.nextInt(3) + 4 :
                     random.nextInt(3) + 1;
 
             player.getPersistentData().putInt(LAST_ROLL_TAG, roll);
-            player.displayClientMessage(Component.literal("✧ " + roll + " ✧"), true);
+            String prefix = GoldenLuckyCatItem.hasLuckyCat(player) ? "🐱" : "✧";
+            player.displayClientMessage(Component.literal(prefix + " " + roll + " " + prefix), true);
         }
 
         return InteractionResultHolder.success(player.getItemInHand(hand));
