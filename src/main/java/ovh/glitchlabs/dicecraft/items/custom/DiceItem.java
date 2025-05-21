@@ -25,7 +25,7 @@ public class DiceItem extends Item {
             Random random = new Random();
             int diceRoll = random.nextInt(6) + 1;
 
-            // Speichere das Würfelergebnis am Spieler
+
             CompoundTag playerData = player.getPersistentData();
             playerData.putInt(LAST_ROLL_TAG, diceRoll);
 

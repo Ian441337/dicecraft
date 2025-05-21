@@ -48,7 +48,7 @@ public class LootBagItem extends Item {
                 level.addFreshEntity(itemEntity);
             }
 
-            // Verbrauche die Glückstüte
+
             itemStack.shrink(1);
         }
 

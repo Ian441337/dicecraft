@@ -28,13 +28,13 @@ public class DiceInspectorItem extends Item {
             double range = 5.0;
             Vec3 endPos = eyePos.add(lookVec.scale(range));
             
-            // Erstelle eine Box entlang der Sichtlinie des Spielers
+
             AABB searchBox = new AABB(
                 eyePos.x - 0.5, eyePos.y - 0.5, eyePos.z - 0.5,
                 endPos.x + 0.5, endPos.y + 0.5, endPos.z + 0.5
             );
             
-            // Suche nach Spielern in dieser Box
+
             List<Entity> entities = level.getEntities(player, searchBox, 
                 entity -> entity instanceof Player && entity != player);
             
