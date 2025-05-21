@@ -1,0 +1,17 @@
+{
+  "creativetab.dicecraft.tab": "DiceCraft",
+
+  "item.dicecraft.poker_chip_red": "Red Poker Chip",
+  "item.dicecraft.poker_chip_blue": "Blue Poker Chip",
+  "item.dicecraft.poker_chip_yellow": "Yellow Poker Chip",
+  "item.dicecraft.poker_chip_cyan": "Cyan Poker Chip",
+  "item.dicecraft.poker_chip_purple": "Purple Poker Chip",
+  "item.dicecraft.poker_chip_black": "Black Poker Chip",
+  "item.dicecraft.poker_chip_blue": "Blue Poker Chip",
+  "item.dicecraft.poker_chip_green": "Green Poker Chip",
+  "item.dicecraft.poker_chip_red": "Red Poker Chip",
+  "item.dicecraft.dice_inspector": "Dice Inspector",
+  "item.dicecraft.dice": "Dice",
+
+  "entity.minecraft.villager.dicecraft.casino": "Casino Dealer"
+}
