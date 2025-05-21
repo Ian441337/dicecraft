@@ -10,6 +10,7 @@ import ovh.glitchlabs.dicecraft.items.custom.DiceInspectorItem;
 import ovh.glitchlabs.dicecraft.items.custom.DiceItem;
 import ovh.glitchlabs.dicecraft.items.custom.LootBagItem;
 import ovh.glitchlabs.dicecraft.items.custom.LuckyDiceItem;
+import ovh.glitchlabs.dicecraft.items.custom.CoinItem;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Dicecraft.MODID);
@@ -47,6 +48,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> DICE_INSPECTOR = ITEMS.register("dice_inspector",
             () -> new DiceInspectorItem(new Item.Properties()));
+
+    public static final DeferredItem<Item> COIN = ITEMS.register("coin",
+            () -> new CoinItem(new Item.Properties()));
 
     public static final DeferredItem<Item> LOOT_BAG = ITEMS.register("loot_bag",
             () -> new LootBagItem(new Item.Properties()));

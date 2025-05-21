@@ -10,16 +10,15 @@ import ovh.glitchlabs.dicecraft.Dicecraft;
 
 public class ModTags {
     public static class Blocks {
-//        public static final TagKey<Block> NEEDS_BISMUTH_TOOL = createTag("needs_bismuth_tool");
-
-
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(Dicecraft.MODID, name));
         }
     }
 
     public static class Items {
-//        public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
+        public static final TagKey<Item> DICE = createTag("dice");
+        public static final TagKey<Item> GAMBLING_ITEMS = createTag("gambling_items");
+        public static final TagKey<Item> POKER_CHIPS = createTag("poker_chips");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(Dicecraft.MODID, name));
