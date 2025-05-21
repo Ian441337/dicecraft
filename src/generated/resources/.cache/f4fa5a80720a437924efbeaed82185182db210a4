@@ -1,6 +1,8 @@
-// 1.21.1	2025-05-21T16:20:16.74712102	Item Models: dicecraft
+// 1.21.1	2025-05-21T23:19:21.816564982	Item Models: dicecraft
+6b3fb2e14f18cfefde5f45cdeaa8c6a3f2db846b assets/dicecraft/models/item/cursed_dice.json
 ca32d3bcabf3159808f798098a3cdc30b44c811f assets/dicecraft/models/item/dice.json
 500ccd5025388eb5e413f721279bdb8ee995ae47 assets/dicecraft/models/item/dice_inspector.json
+547ae1bc3e0a19019984d468a92274f17f694a2f assets/dicecraft/models/item/lucky_dice.json
 b80780f3c7ab28ff4bc9ddd4b293baee3d9b1941 assets/dicecraft/models/item/poker_chip_black.json
 f6284dd389df57808710ec24dbbce1198871676a assets/dicecraft/models/item/poker_chip_blue.json
 a89b71fec568103432aa16604ebc3c704548f103 assets/dicecraft/models/item/poker_chip_cyan.json

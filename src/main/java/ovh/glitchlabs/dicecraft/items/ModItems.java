@@ -5,9 +5,11 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import ovh.glitchlabs.dicecraft.Dicecraft;
+import ovh.glitchlabs.dicecraft.items.custom.CursedDiceItem;
 import ovh.glitchlabs.dicecraft.items.custom.DiceInspectorItem;
 import ovh.glitchlabs.dicecraft.items.custom.DiceItem;
 import ovh.glitchlabs.dicecraft.items.custom.LootBagItem;
+import ovh.glitchlabs.dicecraft.items.custom.LuckyDiceItem;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Dicecraft.MODID);
@@ -36,6 +38,12 @@ public class ModItems {
 
     public static final DeferredItem<Item> DICE = ITEMS.register("dice",
             () -> new DiceItem(new Item.Properties()));
+
+    public static final DeferredItem<Item> CURSED_DICE = ITEMS.register("cursed_dice",
+            () -> new CursedDiceItem(new Item.Properties()));
+
+    public static final DeferredItem<Item> LUCKY_DICE = ITEMS.register("lucky_dice",
+            () -> new LuckyDiceItem(new Item.Properties()));
 
     public static final DeferredItem<Item> DICE_INSPECTOR = ITEMS.register("dice_inspector",
             () -> new DiceInspectorItem(new Item.Properties()));

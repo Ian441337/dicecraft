@@ -22,5 +22,7 @@ public class ModItemProvidor extends ItemModelProvider {
         basicItem(ModItems.POKER_CHIP_CYAN.get());
         basicItem(ModItems.DICE.get());
         basicItem(ModItems.DICE_INSPECTOR.get());
+        basicItem(ModItems.CURSED_DICE.get());
+        basicItem(ModItems.LUCKY_DICE.get());
     }
 }
